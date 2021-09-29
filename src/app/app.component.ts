@@ -31,19 +31,48 @@ export class AppComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   public toggleFlipOne() {
-    this.flipOne = (this.flipOne === 'inactive') ? 'active' : 'inactive';
+    if (this.flipOne === 'inactive') {
+      this.flipOne = 'active';
+      this.flipTwo = 'inactive';
+      this.flipThree = 'inactive';
+      this.flip = 'inactive';
+    } else {
+      this.flipOne = 'inactive';
+    }
   }
    // tslint:disable-next-line:typedef
    public toggleFlipTwo() {
-    this.flipTwo = (this.flipTwo === 'inactive') ? 'active' : 'inactive';
+    if (this.flipTwo === 'inactive') {
+      this.flipTwo = 'active';
+      this.flipOne = 'inactive';
+      this.flipThree = 'inactive';
+      this.flip = 'inactive';
+    } else {
+      this.flipTwo = 'inactive';
+    }
   }
    // tslint:disable-next-line:typedef
    public toggleFlipThree() {
-    this.flipThree = (this.flipThree === 'inactive') ? 'active' : 'inactive';
+    if (this.flipThree === 'inactive') {
+      this.flipThree = 'active';
+      this.flipOne = 'inactive';
+      this.flipTwo = 'inactive';
+      this.flip = 'inactive';
+    } else {
+      this.flipThree = 'inactive';
+    }
   }
   // tslint:disable-next-line:typedef
   public toggleFlip() {
-    this.flip = (this.flip === 'inactive') ? 'active' : 'inactive';
+    // this.flip = (this.flip === 'inactive') ? 'active' : 'inactive';
+    if (this.flip === 'inactive') {
+      this.flip = 'active';
+      this.flipOne = 'inactive';
+      this.flipTwo = 'inactive';
+      this.flipThree = 'inactive';
+    } else {
+      this.flip = 'inactive';
+    }
   }
 
 }
