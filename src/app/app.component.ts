@@ -21,15 +21,29 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 export class AppComponent implements OnInit {
   title = 'angular-test-task';
   flip = 'inactive';
-
+  flipOne = 'inactive';
+  flipTwo = 'inactive';
+  flipThree = 'inactive';
   constructor() { }
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
 
-
+  // tslint:disable-next-line:typedef
+  public toggleFlipOne() {
+    this.flipOne = (this.flipOne === 'inactive') ? 'active' : 'inactive';
+  }
+   // tslint:disable-next-line:typedef
+   public toggleFlipTwo() {
+    this.flipTwo = (this.flipTwo === 'inactive') ? 'active' : 'inactive';
+  }
+   // tslint:disable-next-line:typedef
+   public toggleFlipThree() {
+    this.flipThree = (this.flipThree === 'inactive') ? 'active' : 'inactive';
+  }
   // tslint:disable-next-line:typedef
   public toggleFlip() {
     this.flip = (this.flip === 'inactive') ? 'active' : 'inactive';
   }
+
 }
